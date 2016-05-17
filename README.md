@@ -42,30 +42,26 @@
 2. To serve ionic app for local development using web browser - `ionic serve`
 3. Login to Ionic Creator account - `ionic login`
 
+## Test Your Applications ##
+
+1. Via Web Browser(highly recommended using Google Chrome) - `ionic serve`
+2. Via Ionic View Application
+	- [Play Store](https://play.google.com/store/apps/details?id=com.ionic.viewapp)
+	- [App Store](https://itunes.apple.com/us/app/ionic-view/id849930087?mt=8)
+3. Directly to Device - `ionic run android`
+	- Make sure to install Android SDK Tools before you're able to test your applications on devices
+
 ### Day 1 ###
 
 1. [Installation & Configuration](http://bit.ly/cc-ionic-installation)
 2. Ionic Creator
-	- Sign Up
+	- [Sign Up] (https://creator.ionic.io/app/signup)
 	- Design
 	- Export
 
 ### Day 2 ###
 
-1. Introduction to AngularJs
-	- Attributes
-		- Read each item in list using `ng-repeat`
-		- Call functions in AngularJs `$scope` using `ng-click`
-		- Define our AngularJs application by using `ng-app`
-		- Bind our input(view) to the model using - `ng-model`
-	- Methods
-		- Echo - `{{ }}`
-	- Scope
-		- Local Scope: `$scope`
-			- Accessible to the particular Controller only
-		- Global Scope: `$rootScope`
-			- Accessible in any location in our application
-2. Ionic Structure
+1. Ionic Structure
 	- hooks - scripts used to customize cordova commands
 	- plugins - ngCordova plugins
 	- platforms - target devices (ios,android,bb,windows)
@@ -81,6 +77,19 @@
 			- services.js - define external services want to use, can be service / factory.
 		- lib - external libraries such as ngCordova, Swiper, etc. Installation via bower
 		- templates - our views
+2. Introduction to AngularJs
+	- Attributes
+		- Read each item in list using `ng-repeat`
+		- Call functions in AngularJs `$scope` using `ng-click`
+		- Define our AngularJs application by using `ng-app`
+		- Bind our input(view) to the model using - `ng-model`
+	- Methods
+		- Echo - `{{ }}`
+	- Scope
+		- Local Scope: `$scope`
+			- Accessible to the particular Controller only
+		- Global Scope: `$rootScope`
+			- Accessible in any location in our application
 3. `app.js`
 4. Your application need signboards! Use `route.js`!
 	- Setup Route(route.js) to accept parameters `url: '/profile/:id'`
