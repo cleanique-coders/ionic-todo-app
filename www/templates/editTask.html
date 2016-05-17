@@ -1,0 +1,22 @@
+<ion-view title="Edit Task" id="page6" class=" ">
+    <ion-content padding="true" class="has-header">
+        <form id="editTask-form2" class="list ">
+            <label class="item item-input " id="editTask-input2" name="name">
+                <span class="input-label">Task Name</span>
+                <input type="text" placeholder="">
+            </label>
+            <label class="item item-input " id="editTask-textarea2" name="description">
+                <span class="input-label">Description</span><textarea placeholder="Task Description"> </textarea>
+            </label>
+            <label class="item item-select " id="editTask-select2" name="status">
+                <span class="input-label">Status</span>
+                <select>
+                    <option>New</option>
+                    <option>In Progress</option>
+                    <option>Done</option>
+                </select>
+            </label>
+            <a ui-sref="toDoApp" id="editTask-button3" class=" button button-balanced  button-block ">Save</a>
+        </form>
+    </ion-content>
+</ion-view>
