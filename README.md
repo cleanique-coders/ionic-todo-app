@@ -41,6 +41,9 @@
 	- template: `blank`, `tabs`, `sidemenu`
 2. To serve ionic app for local development using web browser - `ionic serve`
 3. Login to Ionic Creator account - `ionic login`
+4. Add Target Platform to Build - `ionic platform add android`
+5. To build apk only `ionic build android`
+6. To build apk, upload to phone, install and run the app - `ionic run android`
 
 ## Test Your Applications ##
 
