@@ -2,7 +2,7 @@ angular.module('app.controllers', [])
 
 .run(function($rootScope, $localStorage){
 	// $localStorage.user = user;
-	$localStorage.title = 'ToDo App';
+	/*$localStorage.title = 'ToDo App';
 	$localStorage.tasks = [
 		{
 			id: 1,
@@ -22,7 +22,7 @@ angular.module('app.controllers', [])
 			description: 'Lorem Ipsum',
 			status: 'New'
 		}
-	];
+	];*/
 
 	/*
 	Documentation: https://github.com/gsklee/ngStorage#read-and-write--demo
