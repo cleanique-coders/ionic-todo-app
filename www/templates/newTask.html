@@ -3,13 +3,24 @@
         <form id="newTask-form1" class="list ">
             <label class="item item-input " id="newTask-input1" name="name">
                 <span class="input-label">Task Name</span>
+
+                <!-- 
+                    ng-model 
+                    to bind with $scope, 
+                    so it's accessible within controller 
+                -->
                 <input ng-model="$parent.name" type="text" placeholder="" name="name">
             </label>
             <label class="item item-input " id="newTask-textarea1" name="description">
                 <span class="input-label">Description</span>
                 <textarea ng-model="$parent.description" placeholder="Task Description" name="description"></textarea>
             </label>
-            <a ng-click="save()" id="newTask-button2" class=" button button-balanced  button-block ">Save</a>
+
+            <!-- 
+                ng-click
+                You call functions defined in $scope / $rootScope
+             -->
+            <a ng-click="simpan()" id="newTask-button2" class=" button button-balanced  button-block ">Save</a>
         </form>
     </ion-content>
 </ion-view>

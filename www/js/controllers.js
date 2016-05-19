@@ -43,26 +43,7 @@ angular.module('app.controllers', [])
 	];
 	$rootScope.$storage = $localStorage;
 	if($rootScope.$storage.tasks == undefined) {
-		$rootScope.$storage.tasks = [
-			{
-				id: 1,
-				name: 'Task 1',
-				description: 'Lorem Ipsum',
-				status: 'New'
-			},
-			{
-				id: 2,
-				name: 'Task 2',
-				description: 'Lorem Ipsum',
-				status: 'New'
-			},
-			{
-				id: 3,
-				name: 'Task 3',
-				description: 'Lorem Ipsum',
-				status: 'New'
-			}
-		];
+		$rootScope.$storage.tasks = [];
 	}
 })
 
@@ -98,15 +79,19 @@ angular.module('app.controllers', [])
 })
    
 .controller('newTaskCtrl', function($scope, $state, $localStorage) {
-	$scope.save = function() {
+	$scope.simpan = function() {
 
-		$scope.$storage.tasks.unshift({
-			id: Math.floor((Math.random() * 10000) + 1),
-			name: $scope.name,
-			description: $scope.description,
-			status: 'New'
-		});
+		// save new task
+		$localStorage.tasks.unshift(
+			{
+				id: Math.floor((Math.random() * 10000) + 1),
+				name: $scope.name,
+				description: $scope.description,
+				status: 'New'
+			}
+		);
 
+		// redirect to listing page
 		$state.go('toDoApp');
 	}
 })
