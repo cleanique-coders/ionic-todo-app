@@ -3,17 +3,17 @@
         <form id="editTask-form2" class="list ">
             <label class="item item-input " id="editTask-input2" name="name">
                 <span class="input-label">Task Name</span>
-                <input type="text" placeholder="">
+                <input type="text" placeholder="" ng-model="task.name" value="{{ task.name }}">
             </label>
             <label class="item item-input " id="editTask-textarea2" name="description">
-                <span class="input-label">Description</span><textarea placeholder="Task Description"> </textarea>
+                <span class="input-label">Description</span>
+                <textarea ng-model="task.description" placeholder="Task Description">{{ task.description }}</textarea>
             </label>
             <label class="item item-select " id="editTask-select2" name="status">
                 <span class="input-label">Status</span>
-                <select>
-                    <option>New</option>
-                    <option>In Progress</option>
-                    <option>Done</option>
+                <select 
+                    ng-options="option.name for option in statuses" 
+                    ng-model="task.status">
                 </select>
             </label>
             <a ui-sref="toDoApp" id="editTask-button3" class=" button button-balanced  button-block ">Save</a>

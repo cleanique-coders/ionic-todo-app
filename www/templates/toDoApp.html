@@ -1,10 +1,33 @@
 <ion-view title="To Do App" id="page1" class=" ">
     <ion-content padding="true" class="has-header">
         <a ui-sref="newTask" id="toDoApp-button1" class=" button button-balanced  button-block icon ion-ios-plus "></a>
-        <ion-list id="toDoApp-list1" class=" ">
-            <ion-item id="toDoApp-list-item1" ui-sref="editTask" class="  ">Item 1</ion-item>
-            <ion-item id="toDoApp-list-item2" ui-sref="editTask" class="  ">Item 2</ion-item>
-            <ion-item id="toDoApp-list-item3" ui-sref="editTask" class="  ">Item 3</ion-item>
+        
+        <!-- Read from $scope.tasks -->
+        <ion-list id="toDoApp-list1" class="list" ng-repeat="task in $storage.tasks">
+
+            <!-- Display each task information -->
+            <ion-item id="{{ task.id }}" class="item item-btn-right">
+
+                <!-- Display task title -->
+            	<h2>{{ task.name }}</h2>
+
+                <!-- Display Show Details, Edit and Remove Button -->
+            	<div class="button-bar">
+            	 	<button class="button button-balanced" ui-sref="taskDetails({id:task.id})">
+				      <i class="icon ion-eye"></i>
+				    </button>
+
+				    <button class="button button-positive" ui-sref="editTask({id:task.id})">
+				      <i class="icon ion-edit"></i>
+				    </button>
+
+				    <button class="button button-assertive" ng-click="removeTask(task)">
+				      <i class="icon ion-ios-trash"></i>
+				    </button>
+            	</div>
+            </ion-item>
+            
         </ion-list>
+
     </ion-content>
 </ion-view>

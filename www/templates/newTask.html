@@ -3,12 +3,13 @@
         <form id="newTask-form1" class="list ">
             <label class="item item-input " id="newTask-input1" name="name">
                 <span class="input-label">Task Name</span>
-                <input type="text" placeholder="">
+                <input ng-model="$parent.name" type="text" placeholder="" name="name">
             </label>
             <label class="item item-input " id="newTask-textarea1" name="description">
-                <span class="input-label">Description</span><textarea placeholder="Task Description"> </textarea>
+                <span class="input-label">Description</span>
+                <textarea ng-model="$parent.description" placeholder="Task Description" name="description"></textarea>
             </label>
-            <a ui-sref="toDoApp" id="newTask-button2" class=" button button-balanced  button-block ">Save</a>
+            <a ng-click="save()" id="newTask-button2" class=" button button-balanced  button-block ">Save</a>
         </form>
     </ion-content>
 </ion-view>

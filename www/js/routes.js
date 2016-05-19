@@ -10,7 +10,7 @@ angular.module('app.routes', [])
     
   
 
-      .state('toDoApp', {
+  .state('toDoApp', {
     url: '/list',
     templateUrl: 'templates/toDoApp.html',
     controller: 'toDoAppCtrl'
@@ -23,13 +23,13 @@ angular.module('app.routes', [])
   })
 
   .state('editTask', {
-    url: '/edit-task',
+    url: '/edit-task/:id',
     templateUrl: 'templates/editTask.html',
     controller: 'editTaskCtrl'
   })
 
   .state('taskDetails', {
-    url: '/task-details',
+    url: '/task-details/:id',
     templateUrl: 'templates/taskDetails.html',
     controller: 'taskDetailsCtrl'
   })
