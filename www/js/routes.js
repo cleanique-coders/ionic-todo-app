@@ -8,7 +8,17 @@ angular.module('app.routes', [])
   // Each state's controller can be found in controllers.js
   $stateProvider
     
-  
+  .state('register', {
+    url: '/register',
+    templateUrl: 'templates/register.html',
+    controller: 'registerCtrl'
+  })
+
+  .state('login', {
+    url: '/login',
+    templateUrl: 'templates/login.html',
+    controller: 'loginCtrl'
+  })  
 
   .state('toDoApp', {
     url: '/list',
@@ -34,7 +44,7 @@ angular.module('app.routes', [])
     controller: 'taskDetailsCtrl'
   })
 
-$urlRouterProvider.otherwise('/list')
+$urlRouterProvider.otherwise('/login')
 
   
 

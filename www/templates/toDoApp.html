@@ -1,5 +1,9 @@
 <ion-view title="To Do App" id="page1" class=" ">
     <ion-content padding="true" class="has-header">
+        <ion-refresher
+            pulling-text="Pull to refresh..."
+            on-refresh="refreshList()">
+        </ion-refresher>
         <a ui-sref="newTask" id="toDoApp-button1" class=" button button-balanced  button-block icon ion-ios-plus "></a>
         
         <!-- Read from $scope.tasks -->

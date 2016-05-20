@@ -1,0 +1,21 @@
+<ion-view title="To Do App" id="page8" class=" ">
+    <ion-content padding="true" class="has-header">
+        
+        <form id="newTask-form1" class="list ">
+            <label class="item item-input " id="username" name="username">
+                <span class="input-label">Username</span>
+                <input ng-model="$parent.username" type="text" placeholder="" name="username">
+            </label>
+
+            <label class="item item-input " id="password" name="password">
+                <span class="input-label">Password</span>
+                <input ng-model="$parent.password" type="password" placeholder="" name="password">
+            </label>
+
+            <a ng-click="register()" id="newTask-button2" class=" button button-balanced  button-block ">Register</a>
+            <p><center>OR</center></p>
+            <a ui-sref="login()" id="newTask-button3" class=" button button-assertive  button-block ">Login</a>
+        </form>
+
+    </ion-content>
+</ion-view>

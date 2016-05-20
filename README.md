@@ -6,6 +6,12 @@
 4. [Dynamic Templates](http://ionicframework.com/docs/platform-customization/dynamic-templates.html)
 5. [Ionic Books](http://ionicframework.com/docs/guide/)
 
+# Installation
+
+1. Setup APIEndpoint
+	- Open `www/js/app.js`
+	- Replace `http://api.todo.dev` with your API Endpoint
+
 # Syllabus
 
 ## Day 1

@@ -1,13 +1,13 @@
 <ion-view title="Task Details" id="page5" class=" ">
     <ion-content padding="true" class="has-header">
-        <h1 id="taskDetails-heading1" style="color:#000000;" class=" ">{{ task.name }}</h1>
+        <h1 id="taskDetails-heading1" style="color:#000000;" class=" ">{{ $storage.task.name }}</h1>
         <h3>Status: {{ task.status }}</h3>
-        <p id="taskDetails-markdown1" style="color:#000000;" class=" ">{{ task.description }} </p>
+        <p id="taskDetails-markdown1" style="color:#000000;" class=" ">{{ $storage.task.description }} </p>
 
         <!-- 
 			ui-sref
 			go to page by it's name
          -->
-        <a ui-sref="editTask({id:task.id})" id="taskDetails-button4" class=" button button-positive  button-block ">Edit</a>
+        <a ui-sref="editTask({id:$storage.task.id})" id="taskDetails-button4" class=" button button-positive  button-block ">Edit</a>
     </ion-content>
 </ion-view>
